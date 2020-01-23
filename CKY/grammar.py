@@ -50,7 +50,7 @@ class Pcfg(object):
                 if len(right) == 2:
                     if right[0].islower() or right[1].islower():
                         break
-                if len(right) == 1:
+                elif len(right) == 1:
                     if right[0].isupper():
                         break
                 elif len(right) > 2:
