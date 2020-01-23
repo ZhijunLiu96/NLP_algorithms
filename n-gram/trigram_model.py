@@ -46,9 +46,10 @@ def get_ngrams(sequence, n):
                 grams.append(gram)
         else:
             start = ["START"]*(n-1)
-            for i in range(len(start)):
-                sequence.insert(0, start[i])
-            sequence.append("STOP")
+#             for i in range(len(start)):
+#                 sequence.insert(0, start[i])
+#             sequence.append("STOP")
+            sequence = start + sequence +["STOP"]
             for i in range(0, len(sequence)-n+1):
                 gram = tuple(sequence[i:(i+n)])
                 grams.append(gram)
@@ -101,7 +102,7 @@ class TrigramModel(object):
 #        self.bigramcounts = Counter(bigram)
 #        self.trigramcounts = Counter(trigram)
 
-        return
+        return self.unigramcounts, self.bigramcounts, self.trigramcounts
 
     def raw_trigram_probability(self, trigram):
         """
@@ -142,15 +143,6 @@ class TrigramModel(object):
         # store in the TrigramModel instance, and then re-use it.  
         return p
 
-
-    def generate_sentence(self, t=20):
-        """
-        COMPLETE THIS METHOD (OPTIONAL)
-        Generate a random sentence from the trigram model. t specifies the
-        max length, but the sentence may be shorter if STOP is reached.
-        """
-        
-        return result
 
     def smoothed_trigram_probability(self, trigram):
         """
