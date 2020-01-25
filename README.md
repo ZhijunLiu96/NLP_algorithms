@@ -20,19 +20,19 @@ NLP algorithms, including n-gram models, CKY algorithm, dependency parsing, and 
 
 ## [Dependency parsing](https://github.com/ZhijunLiu96/NLP_algorithms/tree/master/dependency%20parsing)
 1. [conll_reader.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/conll_reader.py)
-: 
+: Read and store the dependency relations into a tree structure (DependencyStructure); 
 2. [get_vocab.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/get_vocab.py)
-: 
-3. [decoder.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/decoder.py)
-: 
-4. [extract_training_data.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/extract_training_data.py)
+: Generate an index of words and POS indices;
+3. [extract_training_data.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/extract_training_data.py)
+: Create a class State, initialize a stack and a buffer, and define functions (shift, left_arc, right_arc) for the dependency parsing;
+4. [decoder.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/decoder.py)
 : 
 5. [train_model.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/train_model.py)
 : 
 6. [evaluate.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/evaluate.py)
 : 
 
-## Lexical substitution
+## [Lexical substitution](https://github.com/ZhijunLiu96/NLP_algorithms/tree/master/lexsub)
 1. [lexsub_xml.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/lexsub/lexsub_xml.py)
 : 
 2. [lexsub_main.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/lexsub/lexsub_main.py)
