@@ -24,17 +24,18 @@ NLP algorithms, including n-gram models, CKY algorithm, dependency parsing, and 
 2. [get_vocab.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/get_vocab.py)
 : Generate an index of words and POS indices;
 3. [extract_training_data.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/extract_training_data.py)
-: Create a class State, initialize a stack and a buffer, and define functions (shift, left_arc, right_arc) for the dependency parsing; Create a class FeatureExtractor, 
+: Create a class State, initialize a stack and a buffer, and define functions (shift, left_arc, right_arc) for the dependency parsing; Create a class FeatureExtractor to generate the input and output for the neural network algorithm;
 4. [decoder.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/decoder.py)
-: 
+: Create a class Parser which returns the result of dependency parsing in the format of DependencyStructure;
 5. [train_model.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/train_model.py)
-: 
+: Use package keras to train a neural network model;
 6. [evaluate.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/evaluate.py)
-: 
+: Calculate the accuracy of both unlabeled and labeled pairs.
 
 ## [Lexical substitution](https://github.com/ZhijunLiu96/NLP_algorithms/tree/master/lexsub)
-1. [lexsub_xml.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/lexsub/lexsub_xml.py)
-: 
-2. [lexsub_main.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/lexsub/lexsub_main.py)
-: 
-
+[lexsub_main.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/lexsub/lexsub_main.py): 
+1. Define functions to tokenize words, get synonyms from wordnet, and predict the possible synonym with the highest total occurence frequency;
+2. Simplified Leak Algorithm: Use dictionaries to create bags of words for synonyms by using definitions and examples, and compute the overlap between the definition of the synset and the context of the target word;
+3. Most Similar Synonym: Use word2vec model to calculate the similarity of each cadidates, and return the most similar one;
+4. Predict the nearest with context: Create a single vector for the target word and its context by summing together the vectors for all words in the sentence, obtaining a single sentence vector; Measure the similarity of the potential synonyms to this sentence vector;
+5. Improved algorithm: Improve Simplified Leak Algorithm by turning all words in the context into standard formats.
