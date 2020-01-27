@@ -24,7 +24,7 @@ NLP algorithms, including n-gram models, CKY algorithm, dependency parsing, and 
 2. [get_vocab.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/get_vocab.py)
 : Generate an index of words and POS indices;
 3. [extract_training_data.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/extract_training_data.py)
-: Create an object State, initialize a stack and a buffer, and define functions (shift, left_arc, right_arc) for the dependency parsing; Create a class FeatureExtractor to generate the input and output for the neural network algorithm;
+: Create an object State, initialize a stack and a buffer, and define functions (shift, left_arc, right_arc) for the dependency parsing; Create an object FeatureExtractor to generate the input and output for the neural network algorithm;
 4. [decoder.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/decoder.py)
 : Create an object Parser which returns the result of dependency parsing in the format of DependencyStructure;
 5. [train_model.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/dependency%20parsing/train_model.py)
