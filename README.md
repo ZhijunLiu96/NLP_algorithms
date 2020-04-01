@@ -35,7 +35,7 @@ NLP algorithms, including n-gram models, CKY algorithm, dependency parsing, and 
 ## [Lexical substitution](https://github.com/ZhijunLiu96/NLP_algorithms/tree/master/lexsub)
 [lexsub_main.py](https://github.com/ZhijunLiu96/NLP_algorithms/blob/master/lexsub/lexsub_main.py): 
 1. Define functions to tokenize words, get synonyms from wordnet, and predict the possible synonym with the highest total occurence frequency;
-2. Simplified Leak Algorithm: Use dictionaries to create bags of words for synonyms by using definitions and examples, and compute the overlap between the definition of the synset and the context of the target word;
+2. Simplified Lesk Algorithm: Use dictionaries to create bags of words for synonyms by using definitions and examples, and compute the overlap between the definition of the synset and the context of the target word;
 3. Most Similar Synonym: Use word2vec model to calculate the similarity of each cadidates, and return the most similar one;
 4. Predict the nearest with context: Create a single vector for the target word and its context by summing together the vectors for all words in the sentence, obtaining a single sentence vector; Measure the similarity of the potential synonyms to this sentence vector;
 5. Improved algorithm: Improve Simplified Leak Algorithm by turning all words in the context into standard formats.
